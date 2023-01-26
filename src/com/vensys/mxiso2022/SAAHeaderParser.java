@@ -11,24 +11,55 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.IOException;
+import java.io.StringReader;
+import java.io.StringWriter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
 public class SAAHeaderParser extends SAAHeader implements TagHeader {
 
-
-
-    public SAAHeaderParser(String path) throws ParserConfigurationException, IOException, SAXException, Exception {
-
+    /**
+     * Parse Header SAA dari File
+     * @param file
+     * @throws Exception
+     */
+    public SAAHeaderParser(File file) throws  Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
 
         // get the document
-        Document document = builder.parse(new File(path));
+        Document document = builder.parse(file);
         document.getDocumentElement().normalize();
+
+        this.parse(document);
+    }
+
+    /**
+     * Parse Header SAA dari xml dalam bentuk String
+     * @param xml
+     * @throws Exception
+     */
+    public SAAHeaderParser(String xml) throws Exception{
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+
+        // Conver from string to InputSource
+        InputSource inputSource = new InputSource(new StringReader(xml));
+
+        // get the document
+        Document document = builder.parse(inputSource);
+        document.getDocumentElement().normalize();
+
+        this.parse(document);
+    }
+
+    private void parse (Document document) throws Exception {
 
         // header root
         String headerRoot = document.getDocumentElement().getNodeName();
@@ -37,6 +68,10 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
             throw new Exception("Root Header SAA tidak Valid");
         }
         NodeList nodeList = document.getElementsByTagName(document.getDocumentElement().getNodeName());
+
+        // Replace saa body value
+        document.getElementsByTagName("Saa:Body").item(0).setTextContent("ONLY-SAA-HEADERS");
+        setHeaderSAAFull(writeXMLFile(document));
 
         // parses
         for (int i = 0 ; i < nodeList.getLength() ; i++){
@@ -71,6 +106,26 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
     }
 
     /**
+     * mEMBUAT ULANG XML DARI XML YANG SUDAH DIRUBAH
+     * @param doc
+     * @return
+     * @throws TransformerFactoryConfigurationError
+     * @throws TransformerConfigurationException
+     * @throws TransformerException
+     */
+    private static String writeXMLFile(Document doc)
+            throws TransformerFactoryConfigurationError, TransformerConfigurationException, TransformerException {
+        StringWriter sw = new StringWriter();
+        doc.getDocumentElement().normalize();
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.transform(source, new StreamResult(sw));
+        return sw.toString();
+    }
+
+    /**
      *
      * @param headerTagSaa
      * @param node
@@ -78,8 +133,10 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
      */
     protected String SetValue(String headerTagSaa, Node node){
         Element element = (Element) node;
+
         NodeList nodeList = element.getElementsByTagName(headerTagSaa);
         if (nodeList.getLength() > 0){
+
             return nodeList.item(0).getTextContent();
         }
         return "Not Provided!!!";
