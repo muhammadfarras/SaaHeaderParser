@@ -20,6 +20,8 @@ public class SAAHeader {
 
     private String priority;
 
+    private String headerSAAFull;
+
     /**
      *
      * @param senderReference
@@ -154,5 +156,13 @@ public class SAAHeader {
 
     public String getPriority() {
         return priority;
+    }
+
+    public void setHeaderSAAFull(String headerSAAFull) {
+        this.headerSAAFull = headerSAAFull;
+    }
+
+    public String getHeaderSAAFull() {
+        return headerSAAFull;
     }
 }

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SaaHeaderParser:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SaaHeaderParser_jar</output-path>
+    <root id="archive" name="SaaHeaderParser.jar">
+      <element id="module-output" name="SaaHeaderParser" />
+    </root>
+  </artifact>
+</component>
