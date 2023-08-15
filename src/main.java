@@ -18,14 +18,14 @@ public class main {
                 "\t\t\t<Saa:Sender>\n" +
                 "\t\t\t\t<Saa:DN>ou=xxx,o=mhccidja,o=swift</Saa:DN>\n" +
                 "\t\t\t\t<Saa:FullName>\n" +
-                "\t\t\t\t\t<Saa:X1>MHCCIDJAXXX</Saa:X1>\n" +
+                "\t\t\t\t\t<Saa:X1>MHCCIDJ2323AXXX</Saa:X1>\n" +
                 "\t\t\t\t\t<Saa:X2>xxx</Saa:X2>\n" +
                 "\t\t\t\t</Saa:FullName>\n" +
                 "\t\t\t</Saa:Sender>\n" +
                 "\t\t\t<Saa:Receiver>\n" +
                 "\t\t\t\t<Saa:DN>ou=xxx,o=mhccidja,o=swift</Saa:DN>\n" +
                 "\t\t\t\t<Saa:FullName>\n" +
-                "\t\t\t\t\t<Saa:X1>MHCCIDJAXXX</Saa:X1>\n" +
+                "\t\t\t\t\t<Saa:X1>CHADEFXXX</Saa:X1>\n" +
                 "\t\t\t\t\t<Saa:X2>xxx</Saa:X2>\n" +
                 "\t\t\t\t</Saa:FullName>\n" +
                 "\t\t\t</Saa:Receiver>\n" +
@@ -288,7 +288,7 @@ public class main {
             System.out.println(String.format("%-25s %3s %30s", TagHeader.expiryDateTime," : ",saaHeaderParser.getExpiryDateTime()));
             System.out.println(String.format("%-25s %3s %30s", TagHeader.priority," : ",saaHeaderParser.getPriority()));
 
-            System.out.println(saaHeaderParser.getHeaderSAAFull());
+//            System.out.println(saaHeaderParser.getHeaderSAAFull());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

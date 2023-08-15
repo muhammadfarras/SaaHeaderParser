@@ -22,7 +22,7 @@ public interface TagHeader {
     }
 
     public interface Receiver {
-        public static String Root = "Saa:Sender";
+        public static String Root = "Saa:Receiver";
 
         public static String fullName = "Saa:FullName";
     }

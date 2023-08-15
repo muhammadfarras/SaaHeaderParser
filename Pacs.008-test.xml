@@ -17,7 +17,7 @@
 			<Saa:Receiver>
 				<Saa:DN>ou=xxx,o=mhccidja,o=swift</Saa:DN>
 				<Saa:FullName>
-					<Saa:X1>MHCCIDJAXXX</Saa:X1>
+					<Saa:X1>chadeff</Saa:X1>
 					<Saa:X2>xxx</Saa:X2>
 				</Saa:FullName>
 			</Saa:Receiver>
