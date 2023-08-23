@@ -53,7 +53,7 @@
 				<Saa:Service>swift.finplus!pf</Saa:Service>
 				<Saa:Network>SWIFTNet</Saa:Network>
 				<Saa:SessionNr>000009</Saa:SessionNr>
-				<Saa:SeqNr>000000021</Saa:SeqNr>
+				<Saa:SeqNr>Dengan prefix</Saa:SeqNr>
 				<Saa:TranslatedResult>Success</Saa:TranslatedResult>
 				<Saa:TranslationResultDetails>TranslationInfo version 1.0.0.1</Saa:TranslationResultDetails>
 				<Saa:SWIFTNetNetworkInfo>

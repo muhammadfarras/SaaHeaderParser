@@ -31,7 +31,9 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
      */
     public SAAHeaderParser(File file) throws  Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
+
 
         // get the document
         Document document = builder.parse(file);
@@ -62,15 +64,20 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
     private void parse (Document document) throws Exception {
 
         // header root
-        String headerRoot = document.getDocumentElement().getNodeName();
+        String headerRoot = document.getDocumentElement().getLocalName();
 
-        if (!headerRoot.equalsIgnoreCase("Saa:DataPDU")){
-            throw new Exception("Root Header SAA tidak Valid");
-        }
-        NodeList nodeList = document.getElementsByTagName(document.getDocumentElement().getNodeName());
+        System.out.println("Header ROOT : "+headerRoot);
+
+//        if (!headerRoot.equalsIgnoreCase("DataPDU")){
+//            throw new Exception("Root Header SAA tidak Valid");
+//        }
+        NodeList nodeList = document.getElementsByTagNameNS("*",headerRoot);
+
+        System.out.println("Panjang Node list "+nodeList.getLength());
+
 
         // Replace saa body value
-        document.getElementsByTagName("Saa:Body").item(0).setTextContent("ONLY-SAA-HEADERS");
+        document.getElementsByTagNameNS("*","Body").item(0).setTextContent("ONLY-SAA-HEADERS");
         setHeaderSAAFull(writeXMLFile(document));
 
         // parses
@@ -134,7 +141,7 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
     protected String SetValue(String headerTagSaa, Node node){
         Element element = (Element) node;
 
-        NodeList nodeList = element.getElementsByTagName(headerTagSaa);
+        NodeList nodeList = element.getElementsByTagNameNS("*",headerTagSaa);
         if (nodeList.getLength() > 0){
 
             return nodeList.item(0).getTextContent();
@@ -145,14 +152,14 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
     protected String setDeepValues(List<String> headerTagSaa, Node node){
 
         Element element = (Element) node;
-        NodeList nodeList = element.getElementsByTagName(headerTagSaa.get(0));
+        NodeList nodeList = element.getElementsByTagNameNS("*",headerTagSaa.get(0));
         if (nodeList.getLength() > 0){
             for (int a = 0 ; a < nodeList.getLength(); a++){
                 Element deep1 = (Element) nodeList.item(a);
                 if (deep1.getNodeType() == Node.ELEMENT_NODE){
 
                     Element deepElement = (Element)  deep1;
-                    NodeList nodeList1 = deepElement.getElementsByTagName("Saa:X1");
+                    NodeList nodeList1 = deepElement.getElementsByTagNameNS("*","X1");
 
                     if (nodeList1.getLength() > 0){
                         return nodeList1.item(0).getTextContent();
