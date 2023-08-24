@@ -49,6 +49,7 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
      */
     public SAAHeaderParser(String xml) throws Exception{
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
 
         // Conver from string to InputSource
@@ -146,7 +147,7 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
 
             return nodeList.item(0).getTextContent();
         }
-        return "Not Provided!!!";
+        return "";
     }
 
     protected String setDeepValues(List<String> headerTagSaa, Node node){
@@ -168,6 +169,6 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
             }
 
         }
-        return "Not Provided!!!";
+        return "";
     }
 }
