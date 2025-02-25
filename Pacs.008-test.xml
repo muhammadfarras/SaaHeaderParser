@@ -1,263 +1,260 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Saa:DataPDU xmlns:Saa="urn:swift:saa:xsd:saa.2.0" xmlns:Sw="urn:swift:snl:ns.Sw" xmlns:SwInt="urn:swift:snl:ns.SwInt" xmlns:SwGbl="urn:swift:snl:ns.SwGbl" xmlns:SwSec="urn:swift:snl:ns.SwSec">
-	<Saa:Revision>2.0.13</Saa:Revision>
-	<Saa:Header>
-		<Saa:Message>
-			<Saa:SenderReference>OMHCCIDJAXXX008TC01.03$22080414</Saa:SenderReference>
-			<Saa:MessageIdentifier>pacs.008.001.08</Saa:MessageIdentifier>
-			<Saa:Format>MX</Saa:Format>
-			<Saa:SubFormat>Output</Saa:SubFormat>
-			<Saa:Sender>
-				<Saa:DN>ou=xxx,o=mhccidja,o=swift</Saa:DN>
-				<Saa:FullName>
-					<Saa:X1>MHCCIDJAXXX</Saa:X1>
-					<Saa:X2>xxx</Saa:X2>
-				</Saa:FullName>
-			</Saa:Sender>
-			<Saa:Receiver>
-				<Saa:DN>ou=xxx,o=mhccidja,o=swift</Saa:DN>
-				<Saa:FullName>
-					<Saa:X1>chadeff</Saa:X1>
-					<Saa:X2>xxx</Saa:X2>
-				</Saa:FullName>
-			</Saa:Receiver>
-			<Saa:InterfaceInfo>
-				<Saa:UserReference>TC01.03</Saa:UserReference>
-				<Saa:MessageCreator>SWIFTNetInterface</Saa:MessageCreator>
-				<Saa:MessageContext>Copy</Saa:MessageContext>
-				<Saa:MessageNature>Financial</Saa:MessageNature>
-				<Saa:Sumid>1D147B1AFFFFFFF1</Saa:Sumid>
-				<Saa:ServiceURI>mp/mx/_ImGiIFKDEeyXX57HMRFmxw</Saa:ServiceURI>
-				<Saa:MessageTypeURI>mp/mx/_GqOv4GFsEeyeS-wGmaFOhQ/_GqP-AGFsEeyeS-wGmaFOhQ</Saa:MessageTypeURI>
-			</Saa:InterfaceInfo>
-			<Saa:NetworkInfo>
-				<Saa:Priority>Normal</Saa:Priority>
-				<Saa:IsPossibleDuplicate>true</Saa:IsPossibleDuplicate>
-				<Saa:DuplicateHistory>
-					<Saa:PDM>
-            &lt;Sw:SnFDeliveryInfo&gt;
-                &lt;Sw:SwiftTime&gt;2022-08-04T08:31:03Z&lt;/Sw:SwiftTime&gt;
-                &lt;SwSec:UserDN&gt;cn=finuser2,o=MHCCIDJA,o=swift&lt;/SwSec:UserDN&gt;
-                &lt;Sw:SnFSessionId&gt;MHCCIDJA_finplusfut!p:p:000009&lt;/Sw:SnFSessionId&gt;
-                &lt;SwInt:SNLId&gt;snl50454&lt;/SwInt:SNLId&gt;
-                &lt;Sw:RetryReason&gt;
-                    &lt;SwGbl:StatusAttributes&gt;
-                        &lt;SwGbl:Severity&gt;Transient&lt;/SwGbl:Severity&gt;
-                        &lt;SwGbl:Code&gt;Sw.Gbl.InternalError&lt;/SwGbl:Code&gt;
-                        &lt;SwGbl:Text&gt;Call to server application failed&lt;/SwGbl:Text&gt;
-                    &lt;/SwGbl:StatusAttributes&gt;
-                &lt;/Sw:RetryReason&gt;
-            &lt;/Sw:SnFDeliveryInfo&gt;
-        </Saa:PDM>
-				</Saa:DuplicateHistory>
-				<Saa:Service>swift.finplus!pf</Saa:Service>
-				<Saa:Network>SWIFTNet</Saa:Network>
-				<Saa:SessionNr>000009</Saa:SessionNr>
-				<Saa:SeqNr>Dengan prefix</Saa:SeqNr>
-				<Saa:TranslatedResult>Success</Saa:TranslatedResult>
-				<Saa:TranslationResultDetails>TranslationInfo version 1.0.0.1</Saa:TranslationResultDetails>
-				<Saa:SWIFTNetNetworkInfo>
-					<Saa:RequestType>pacs.008.001.08</Saa:RequestType>
-					<Saa:RequestSubtype>swift.gpi.swiftgo.01</Saa:RequestSubtype>
-					<Saa:SWIFTRef>swi00001-2022-08-04T08:31:03.10290.090538Z</Saa:SWIFTRef>
-					<Saa:SNLRef>SNL50454-2022-08-04T08:31:03.1660.000504Z</Saa:SNLRef>
-					<Saa:Reference>0fba8228-13cf-41ed-9a75-421ad4d03272</Saa:Reference>
-					<Saa:SnFQueueName>MHCCIDJA_finplusfut!p</Saa:SnFQueueName>
-					<Saa:SnFInputTime>0301:2022-08-04T08:31:03</Saa:SnFInputTime>
-					<Saa:SnFDeliveryTime>2022-08-04T08:31:52Z</Saa:SnFDeliveryTime>
-					<Saa:ValidationDescriptor>
-						<SwInt:ValResult>Success</SwInt:ValResult>
-					</Saa:ValidationDescriptor>
-				</Saa:SWIFTNetNetworkInfo>
-			</Saa:NetworkInfo>
-			<Saa:SecurityInfo>
-				<Saa:SWIFTNetSecurityInfo>
-					<Saa:SignatureResult>Success</Saa:SignatureResult>
-					<Saa:SignatureValue>
-						<SwSec:Signature>
-							<SwSec:SignedInfo>
-								<Sw:Reference>
-									<Sw:DigestValue>BJDCdQZ/QeFY3Z1VtTsmAC5Z2dMpvcxef8y3Be5yEJc=</Sw:DigestValue>
-								</Sw:Reference>
-							</SwSec:SignedInfo>
-							<SwSec:SignatureValue>PEMF@Proc-Type: 4,MIC-ONLY
-Content-Domain: RFC822
-EntrustFile-Version: 2.0
-Originator-DN: cn=finuser2,o=MHCCIDJA,o=swift
-Orig-SN: 1636325237
-MIC-Info: SHA256, RSA,
- hEidBlzNMJl9YuFnWqKJfp7Bp7th+hQXUsxk9Py//Kzl/GjzGl8oAtWKzbuNIIq4
- CMUZ3wPTNqxqUmJp1IyrjOSH1eVwryjiuStcZcoq8hD/mtdB8Hv/y9W09kM1Q6w+
- K37czDo5Pmimpt+5v5+B5OYulVO50/CmblFVR5QXUVBwBLpZnpSCUIhHDcaXlQfH
- JwXMq4ueprKezicFQYaIiSBIk4gQjZBRi4LjpNMb3hQjk4HORqzfrfU8IANs2IV4
- ezzLikzCSPnvIlAafv+FWxI1p+5MYUvWwnd9nxh5H1dQe0JPCT3ltv2aZzjHneym
- Hl72K5mUCmIsPRdgWLdBJg==
-</SwSec:SignatureValue>
-							<SwSec:KeyInfo>
-								<SwSec:SignDN>cn=finuser2,o=MHCCIDJA,o=swift</SwSec:SignDN>
-								<SwSec:CertPolicyId>1.3.21.6.2</SwSec:CertPolicyId>
-							</SwSec:KeyInfo>
-							<SwSec:Manifest>
-								<Sw:Reference>
-									<Sw:DigestRef>Sw.RequestHeader</Sw:DigestRef>
-									<Sw:DigestValue>rUPb0uMhZvbyZKLSCE2MJ2ZU5430UfWdyIVs0cXolZ4=</Sw:DigestValue>
-								</Sw:Reference>
-								<Sw:Reference>
-									<Sw:DigestRef>Sw.RequestPayload</Sw:DigestRef>
-									<Sw:DigestValue>AH9Og+rfJEDNELaHPsQ5ARrvfxwfNbU0SzTpQ1b9DsU=</Sw:DigestValue>
-								</Sw:Reference>
-								<Sw:Reference>
-									<Sw:DigestRef>Sw.E2S</Sw:DigestRef>
-									<Sw:DigestValue>TZcETQYgBb0yPvhttkJmGd2C9ySaXMqx3Iv4EoEDKiI=</Sw:DigestValue>
-								</Sw:Reference>
-							</SwSec:Manifest>
-						</SwSec:Signature>
-						<SwSec:Signature>
-							<SwSec:SignedInfo>
-								<Sw:Reference>
-									<Sw:DigestValue>NlWToyXOeYV67ZUQ7WUCKZlBqkCu0md8x5PnL9YrnzI=</Sw:DigestValue>
-								</Sw:Reference>
-							</SwSec:SignedInfo>
-							<SwSec:SignatureValue>PEMF@Proc-Type: 4,MIC-ONLY
-Content-Domain: RFC822
-EntrustFile-Version: 2.0
-Originator-DN: cn=%12,cn=sfm,o=swift,o=swift
-Orig-SN: 1627179618
-MIC-Info: SHA256, RSA,
- ObuS63ix+qQRUvCWZKN+k1gzC5eMjvdS18D601YeC32bnqq+1rMjx7Ya66kzloEV
- 8J+VFU06KgjHRjp2oMcAg2AvGbmMS/wimWVQ7vi/e7kFMpJMbJD/yiiaXJkp8yTH
- u4ViML1Texw7oG8YO6OCsWP5j7B7KGS3aehBwMusPOb20icL6yl/txG0Zos4wxZa
- fybztYhES5LpM65KUg351a4kw47GsRk1Al6f8uRM+0AryWuvUniiBCRCd/6ZuoWw
- 1HL1GxFCkoFCWNNoUvHWP6nyoZgowwn3XEouUBCfcBGkpLCL7fs1gSXNdo72ajhH
- +FAavmFIzbZkNZXHG0j84A==
-</SwSec:SignatureValue>
-							<SwSec:KeyInfo>
-								<SwSec:SignDN>cn=%12,cn=sfm,o=swift,o=swift</SwSec:SignDN>
-								<SwSec:CertPolicyId>1.3.21.6.3.10.100.3</SwSec:CertPolicyId>
-							</SwSec:KeyInfo>
-							<SwSec:Manifest>
-								<Sw:Reference>
-									<Sw:DigestRef>Sw.RequestHeader</Sw:DigestRef>
-									<Sw:DigestValue>rUPb0uMhZvbyZKLSCE2MJ2ZU5430UfWdyIVs0cXolZ4=</Sw:DigestValue>
-								</Sw:Reference>
-								<Sw:Reference>
-									<Sw:DigestRef>Sw.RequestPayload</Sw:DigestRef>
-									<Sw:DigestValue>AH9Og+rfJEDNELaHPsQ5ARrvfxwfNbU0SzTpQ1b9DsU=</Sw:DigestValue>
-								</Sw:Reference>
-								<Sw:Reference>
-									<Sw:DigestRef>Translated MT</Sw:DigestRef>
-									<Sw:DigestValue>5YiefxHQF03N3eLKSLFVhMASXN+V7c5JJPl1JGSdKbA=</Sw:DigestValue>
-								</Sw:Reference>
-							</SwSec:Manifest>
-						</SwSec:Signature>
-					</Saa:SignatureValue>
-				</Saa:SWIFTNetSecurityInfo>
-			</Saa:SecurityInfo>
-			<Saa:ExpiryDateTime>20220824083134</Saa:ExpiryDateTime>
-		</Saa:Message>
-	</Saa:Header>
-	<Saa:Body>
-    <AppHdr xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.02">
-        <Fr>
-            <FIId>
-                <FinInstnId>
-                    <BICFI>PINBIDJ0XXX</BICFI>
-                </FinInstnId>
-            </FIId>
-        </Fr>
-        <To>
-            <FIId>
-                <FinInstnId>
-                    <BICFI>PINBIDJ0XXX</BICFI>
-                </FinInstnId>
-            </FIId>
-        </To>
-        <BizMsgIdr>TEST-001</BizMsgIdr>
-        <MsgDefIdr>pacs.008.001.08</MsgDefIdr>
-        <BizSvc>swift.cbprplus.02</BizSvc>
-        <CreDt>9999-12-31T00:00:00+00:00</CreDt>
-    </AppHdr>
-    <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08">
-        <FIToFICstmrCdtTrf>
-            <GrpHdr>
-                <MsgId>TEST-001</MsgId>
-                <CreDtTm>9999-12-31T00:00:00+00:00</CreDtTm>
-                <NbOfTxs>1</NbOfTxs>
-                <SttlmInf>
-                    <SttlmMtd>INDA</SttlmMtd>
-                </SttlmInf>
-            </GrpHdr>
-            <CdtTrfTxInf>
-                <PmtId>
-                    <InstrId>TEST-001</InstrId>
-                    <EndToEndId>NOTPROVIDED</EndToEndId>
-                    <UETR>529607ec-a147-4870-b218-c8a580ea8d58</UETR>
-                </PmtId>
-                <PmtTpInf>
-                    <SvcLvl>
-                        <Cd>G001</Cd>
-                    </SvcLvl>
-                </PmtTpInf>
-                <IntrBkSttlmAmt Ccy="USD">3000.12</IntrBkSttlmAmt>
-                <IntrBkSttlmDt>2022-10-10</IntrBkSttlmDt>
-                <ChrgBr>SHAR</ChrgBr>
-                <InstgAgt>
+    <Saa:Header>
+        <Saa:Message>
+            <Saa:SenderReference>OCHASUS33XXX008230426PIAPN192329130</Saa:SenderReference>
+            <Saa:MessageIdentifier>pacs.008.001.08</Saa:MessageIdentifier>
+            <Saa:Format>MX</Saa:Format>
+            <Saa:SubFormat>Output</Saa:SubFormat>
+            <Saa:Sender>
+                <Saa:DN>ou=xxx,o=chasus33,o=swift</Saa:DN>
+                <Saa:FullName>
+                    <Saa:X1>CHASUS33XXX</Saa:X1>
+                    <Saa:X2>xxx</Saa:X2>
+                </Saa:FullName>
+            </Saa:Sender>
+            <Saa:Receiver>
+                <Saa:DN>ou=xxx,o=mhccidja,o=swift</Saa:DN>
+                <Saa:FullName>
+                    <Saa:X1>MHCCIDJAXXX</Saa:X1>
+                    <Saa:X2>xxx</Saa:X2>
+                </Saa:FullName>
+            </Saa:Receiver>
+            <Saa:InterfaceInfo>
+                <Saa:UserReference>230426PIAPN192329130</Saa:UserReference>
+                <Saa:MessageCreator>SWIFTNetInterface</Saa:MessageCreator>
+                <Saa:MessageContext>Original</Saa:MessageContext>
+                <Saa:MessageNature>Financial</Saa:MessageNature>
+            </Saa:InterfaceInfo>
+            <Saa:NetworkInfo>
+                <Saa:Priority>Normal</Saa:Priority>
+                <Saa:IsPossibleDuplicate>false</Saa:IsPossibleDuplicate>
+                <Saa:Service>swift.finplus</Saa:Service>
+                <Saa:Network>SWIFTNet</Saa:Network>
+                <Saa:SessionNr>000026</Saa:SessionNr>
+                <Saa:SeqNr>000000250</Saa:SeqNr>
+                <Saa:SWIFTNetNetworkInfo>
+                    <Saa:SWIFTRef>swi00003-2023-04-26T03:10:57.8962.770370Z</Saa:SWIFTRef>
+                    <Saa:SNLRef>SNL18460-2023-04-26T03:10:57.12111.096745Z</Saa:SNLRef>
+                    <Saa:SnFQueueName>mhccidja_finplus</Saa:SnFQueueName>
+                    <Saa:SnFInputTime>0102:2023-04-26T03:10:57</Saa:SnFInputTime>
+                    <Saa:ValidationDescriptor>
+                        <SwInt:ValResult>Success</SwInt:ValResult>
+                    </Saa:ValidationDescriptor>
+                </Saa:SWIFTNetNetworkInfo>
+            </Saa:NetworkInfo>
+            <Saa:SecurityInfo>
+                <Saa:RMAResult>Success</Saa:RMAResult>
+                <Saa:SWIFTNetSecurityInfo>
+                    <Saa:SignatureResult>Success</Saa:SignatureResult>
+                    <Saa:SignatureValue>
+                        <SwSec:Signature>
+                            <SwSec:SignedInfo>
+                                <Sw:Reference>
+                                    <Sw:DigestValue>yckMGABMZUbyvrYla+jrzDLvMdM8QG/AUS1+Kfb0VVY=</Sw:DigestValue>
+                                </Sw:Reference>
+                            </SwSec:SignedInfo>
+                            <SwSec:SignatureValue>PEMF@Proc-Type: 4,MIC-ONLY
+                                Content-Domain: RFC822
+                                EntrustFile-Version: 2.0
+                                Originator-DN: cn=sag-prd-02,ou=interact,o=chasus33,o=swift
+                                Orig-SN: 1636336419
+                                MIC-Info: SHA256, RSA,
+                                DspLarccFwfFmwm7ZkelVldr5unCWEgmkwwLYUaPJ+Ilw9yojn2FWDEIlYcEBoht
+                                jf1+ARnNf+fJv6B9UGbtdJhJRssnAuAbf1FPp7zgP7kjy9vYM+GeQqQWorvhv9n6
+                                3xdmpyjtz/RLTjIwPjIeSRc11NII+HENhODdn8cFRhSDA8tX/dczwRtaF+MqX5SB
+                                rYhQw9K9SjhTVWWAkRq0hnPJbxDX8sNTb7PubYtffGOuh9LYnDwQQ4o2SWTyo5RU
+                                BAkXrJRjVKgp8nTzXBxoQXlJXStEzi/+Wt19KU4Gpy1292UweSJ0pK/6jgNrUpxk
+                                EayRefAxY31QPenm8cWlYQ==
+                            </SwSec:SignatureValue>
+                            <SwSec:KeyInfo>
+                                <SwSec:SignDN>cn=sag-prd-02,ou=interact,o=chasus33,o=swift</SwSec:SignDN>
+                                <SwSec:CertPolicyId>1.3.21.6.2</SwSec:CertPolicyId>
+                            </SwSec:KeyInfo>
+                            <SwSec:Manifest>
+                                <Sw:Reference>
+                                    <Sw:DigestRef>Sw.RequestHeader</Sw:DigestRef>
+                                    <Sw:DigestValue>o8k8YauvHPPcqRGNoHjsJKY/zSwMa/2J5kqsScw202U=</Sw:DigestValue>
+                                </Sw:Reference>
+                                <Sw:Reference>
+                                    <Sw:DigestRef>Sw.RequestPayload</Sw:DigestRef>
+                                    <Sw:DigestValue>P9nkNLVEeFZ9+/JDCrI51GiAZZCtFG6znkr+BZZdhmo=</Sw:DigestValue>
+                                </Sw:Reference>
+                                <Sw:Reference>
+                                    <Sw:DigestRef>Sw.E2S</Sw:DigestRef>
+                                    <Sw:DigestValue>amK9K3XJ6XbTTphr/hO+4NhkV6mK/qsDVLfvlqfRuhs=</Sw:DigestValue>
+                                </Sw:Reference>
+                            </SwSec:Manifest>
+                        </SwSec:Signature>
+                        <SwSec:Signature>
+                            <SwSec:SignedInfo>
+                                <Sw:Reference>
+                                    <Sw:DigestValue>iqwPSeQbVg8UISjm2tyIxgWJzogFPjGN6aWi9PGYmIk=</Sw:DigestValue>
+                                </Sw:Reference>
+                            </SwSec:SignedInfo>
+                            <SwSec:SignatureValue>PEMF@Proc-Type: 4,MIC-ONLY
+                                Content-Domain: RFC822
+                                EntrustFile-Version: 2.0
+                                Originator-DN: cn=%8,cn=sfm,o=swift,o=swift
+                                Orig-SN: 1670799675
+                                MIC-Info: SHA256, RSA,
+                                bEd77f1Mpo01s0upcuYKYqQa+yywDsT4tNLu9WjNgLG08x/O4MY1/4scBJTiFmb6
+                                CBwDDyitfZDxuR/8fg9flG7fUz0Dhe53ixWjNkUFLhvDct6XfvWn0iKpSM3Tozz2
+                                XOekE9dkepbtRabzc4RyGmwL1y4nveH6UbG+yOAEfVMBZhnHyW4jM7ah9l/0AOeO
+                                vrEbSSTb00Rce0OaL3tv5xoBZ0KLa384I2QkPMex5NLwOjgBzefZpqT1Vi+qUVWD
+                                oyXlV7t1ibBNF+E+0ZpqwC5Vj9gdMjYGGqW1gvBlm8cHcbda+I8e6qmmMP9WrMp9
+                                P6mqwQX9f4ap+bAfv3PLlg==
+                            </SwSec:SignatureValue>
+                            <SwSec:KeyInfo>
+                                <SwSec:SignDN>cn=%8,cn=sfm,o=swift,o=swift</SwSec:SignDN>
+                                <SwSec:CertPolicyId>1.3.21.6.3.10.100.3</SwSec:CertPolicyId>
+                            </SwSec:KeyInfo>
+                            <SwSec:Manifest>
+                                <Sw:Reference>
+                                    <Sw:DigestRef>Sw.RequestHeader</Sw:DigestRef>
+                                    <Sw:DigestValue>o8k8YauvHPPcqRGNoHjsJKY/zSwMa/2J5kqsScw202U=</Sw:DigestValue>
+                                </Sw:Reference>
+                                <Sw:Reference>
+                                    <Sw:DigestRef>Sw.RequestPayload</Sw:DigestRef>
+                                    <Sw:DigestValue>P9nkNLVEeFZ9+/JDCrI51GiAZZCtFG6znkr+BZZdhmo=</Sw:DigestValue>
+                                </Sw:Reference>
+                                <Sw:Reference>
+                                    <Sw:DigestRef>Translated MT</Sw:DigestRef>
+                                    <Sw:DigestValue>3fWy/cgr9Sg5IYZcG727Kh1BehsQo+mz2M7i6HZJNAo=</Sw:DigestValue>
+                                </Sw:Reference>
+                            </SwSec:Manifest>
+                        </SwSec:Signature>
+                    </Saa:SignatureValue>
+                </Saa:SWIFTNetSecurityInfo>
+            </Saa:SecurityInfo>
+        </Saa:Message>
+    </Saa:Header>
+    <Saa:Body>
+        <AppHdr xmlns="urn:iso:std:iso:20022:tech:xsd:head.001.001.02">
+            <Fr>
+                <FIId>
                     <FinInstnId>
-                        <BICFI>PINBIDJ0XXX</BICFI>
+                        <BICFI>CHASUS33BXXX</BICFI>
                     </FinInstnId>
-                </InstgAgt>
-                <InstdAgt>
+                </FIId>
+            </Fr>
+            <To>
+                <FIId>
                     <FinInstnId>
-                        <BICFI>PINBIDJ0XXX</BICFI>
+                        <BICFI>MHCCIDJAXXX</BICFI>
                     </FinInstnId>
-                </InstdAgt>
-                <Dbtr>
-                    <Nm>NIUM PTE. LTD - NIUM/INSTAREM - CMA</Nm>
-                    <PstlAdr>
-                        <AdrLine>16 RAFFLES QUAY 20-05 HONG LEONG</AdrLine>
-                        <AdrLine>BUILDING SINGAPORE 048581</AdrLine>
-                    </PstlAdr>
-                </Dbtr>
-                <DbtrAcct>
-                    <Id>
-                        <Othr>
-                            <Id>2000496328</Id>
-                        </Othr>
-                    </Id>
-                </DbtrAcct>
-                <DbtrAgt>
-                    <FinInstnId>
-                        <BICFI>PINBIDJ0XXX</BICFI>
-                    </FinInstnId>
-                </DbtrAgt>
-                <CdtrAgt>
-                    <FinInstnId>
-                        <BICFI>PINBIDJ0XXX</BICFI>
-                    </FinInstnId>
-                </CdtrAgt>
-                <Cdtr>
-                    <Nm>KHOUW SIN SIANG,DR</Nm>
-                    <PstlAdr>
-                        <AdrLine>JL.SLT HASANUDIM NO.43 MELAWAI</AdrLine>
-                        <AdrLine>KEBAYORAN BARU</AdrLine>
-                        <AdrLine>KOTA JAKARTA SELATAN</AdrLine>
-                    </PstlAdr>
-                </Cdtr>
-                <CdtrAcct>
-                    <Id>
-                        <Othr>
-                            <Id>111111WELLDONE TRADING HK LIMITED 72644048 HK1111</Id>
-                        </Othr>
-                    </Id>
-                </CdtrAcct>
-                <InstrForNxtAgt>
-                    <InstrInf>/BNF/PY27319246 IMP OF FOOD STUFFS</InstrInf>
-                </InstrForNxtAgt>
-                <RmtInf>
-                    <Ustrd>WELLDONE TRADING HK LIMITED 72644048 HK B4 1ST FLOOR WAH TAK BUILDING NO 1A1J WATERLOO RAOD YAU MA TEI KOWLOO</Ustrd>
-                </RmtInf>
-            </CdtTrfTxInf>
-        </FIToFICstmrCdtTrf>
-    </Document>
-	</Saa:Body>
+                </FIId>
+            </To>
+            <BizMsgIdr>4068342116FS</BizMsgIdr>
+            <MsgDefIdr>pacs.008.001.08</MsgDefIdr>
+            <BizSvc>swift.cbprplus.02</BizSvc>
+            <CreDt>2023-04-25T22:10:29.832-05:00</CreDt>
+            <PssblDplct>false</PssblDplct>
+        </AppHdr>
+        <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08">
+            <FIToFICstmrCdtTrf>
+                <GrpHdr>
+                    <MsgId>SWF201901167218396</MsgId>
+                    <CreDtTm>2023-04-25T22:10:29.831-05:00</CreDtTm>
+                    <NbOfTxs>1</NbOfTxs>
+                    <SttlmInf>
+                        <SttlmMtd>INGA</SttlmMtd>
+                    </SttlmInf>
+                </GrpHdr>
+                <CdtTrfTxInf>
+                    <PmtId>
+                        <InstrId>THISISDEBTCHARGES</InstrId>
+                        <EndToEndId>4068342116FS</EndToEndId>
+                        <TxId>4068342116FS</TxId>
+                        <UETR>7e78fcaf-616b-4628-af9e-b08cd2b72ef9</UETR>
+                    </PmtId>
+                    <PmtTpInf>
+                        <SvcLvl>
+                            <Cd>G001</Cd>
+                        </SvcLvl>
+                    </PmtTpInf>
+                    <IntrBkSttlmAmt Ccy="USD">2000.65</IntrBkSttlmAmt>
+                    <IntrBkSttlmDt>2023-04-26</IntrBkSttlmDt>
+                    <InstdAmt Ccy="USD">64885.15</InstdAmt>
+                    <ChrgBr>DEBT</ChrgBr>
+                    <ChrgsInf>
+                        <Amt Ccy="USD">20.5</Amt>
+                        <Agt>
+                            <FinInstnId>
+                                <BICFI>CHASUS33XXX</BICFI>
+                            </FinInstnId>
+                        </Agt>
+                    </ChrgsInf>
+                    <InstgAgt>
+                        <FinInstnId>
+                            <BICFI>CHASUS33XXX</BICFI>
+                        </FinInstnId>
+                    </InstgAgt>
+                    <InstdAgt>
+                        <FinInstnId>
+                            <BICFI>MHCCIDJAXXX</BICFI>
+                        </FinInstnId>
+                    </InstdAgt>
+                    <Dbtr>
+                        <Nm>TOYOPOWER GLOBAL PTE LTD</Nm>
+                        <PstlAdr>
+                            <AdrLine>26 SIN MING LANE</AdrLine>
+                            <AdrLine>HEX 06-123 MIDVIEW CITY</AdrLine>
+                            <AdrLine>SINGAPORE 573971</AdrLine>
+                        </PstlAdr>
+                    </Dbtr>
+                    <DbtrAcct>
+                        <Id>
+                            <Othr>
+                                <Id>199700418G</Id>
+                            </Othr>
+                        </Id>
+                    </DbtrAcct>
+                    <DbtrAgt>
+                        <FinInstnId>
+                            <BICFI>UOVBSGSG</BICFI>
+                        </FinInstnId>
+                    </DbtrAgt>
+                    <CdtrAgt>
+                        <FinInstnId>
+                            <BICFI>MKCCIDJA</BICFI>
+                        </FinInstnId>
+                    </CdtrAgt>
+                    <Cdtr>
+                        <Nm>LION WINGS123.TBK</Nm>
+                        <PstlAdr>
+                            <AdrLine>WISMA ADR JL PLUIT RAYA I</AdrLine>
+                            <AdrLine>NO 1 JAKARTA 14440 INDONESIA</AdrLine>
+                        </PstlAdr>
+                    </Cdtr>
+                    <CdtrAcct>
+                        <Id>
+                            <Othr>
+                                <Id>3059790201</Id>
+                            </Othr>
+                        </Id>
+                    </CdtrAcct>
+                    <InstrForCdtrAgt>
+                        <InstrInf>/BOOK/4068342116FS</InstrInf>
+                    </InstrForCdtrAgt>
+                    <RmtInf>
+                        <Ustrd>/1011//IC/02000-002/WD001823 (64885.15)</Ustrd>
+                    </RmtInf>
+                </CdtTrfTxInf>
+            </FIToFICstmrCdtTrf>
+        </Document>
+        <!-- {1:F01MHCCIDJAXXXX0000000000}{2:O1032310230425CHASUS33XXXX00000000002304261010N}{3:{111:001}{121:7e78fcaf-616b-4628-af9e-b08cd2b72ef9}{433:/AOK/NO HIT DETECTED}}{4:^~:20:4068342116FS^~:23B:CRED^~:32A:230426USD64864,65^~:33B:USD64885,15^~:50K:/199700418G^~TOYOPOWER GLOBAL PTE LTD^~26 SIN MING LANE^~HEX 06-123 MIDVIEW CITY^~SINGAPORE 573971^~:52A:UOVBSGSG^~:57A:MHCCIDJA^~:59:/3059790201^~PT SELAMAT SEMPURNA,TBK.^~WISMA ADR JL PLUIT RAYA I^~NO 1 JAKARTA 14440 INDONESIA^~:70:/ROC/4068342116FS///URI//1011//IC/0^~2000-002/WD001823 (64885.15)^~:71A:SHA^~:71F:USD20,5^~:72:/ACC//BOOK/4068342116FS^~-}{5:{CHK:B3AB2642B73B}} -->
+        <!-- TranslationResult=TRAK -->
+        <!-- TranslationInfo version 1.0.0.1
+{
+    "errors": [
+        {
+            "code": "TRAK",
+            "message": "IGNORED.T0000M Input content is ignored.\r\nValue '<TxId>4068342116FS</TxId>' has been dropped.\r\nInput path: Document/FIToFICstmrCdtTrf/CdtTrfTxInf/PmtId/TxId",
+            "path": "MT103CORE"
+        }
+    ]
+}
+ -->
+    </Saa:Body>
 </Saa:DataPDU>

@@ -109,6 +109,8 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
 
                 setPriority(SetValue(priority, node));
 
+                setMessageUserReference(setDeepValuesOnce(Arrays.asList(MessageUserReference.Root,MessageUserReference.MUR), node));
+
             }
         }
     }
@@ -163,6 +165,30 @@ public class SAAHeaderParser extends SAAHeader implements TagHeader {
                     NodeList nodeList1 = deepElement.getElementsByTagNameNS("*","X1");
 
                     if (nodeList1.getLength() > 0){
+                        return nodeList1.item(0).getTextContent();
+                    }
+                }
+            }
+
+        }
+        return "";
+    }
+
+
+    protected String setDeepValuesOnce(List<String> headerTagSaa, Node node){
+        Element element = (Element) node;
+        NodeList nodeList = element.getElementsByTagNameNS("*",headerTagSaa.get(0));
+        if (nodeList.getLength() > 0){
+            for (int a = 0 ; a < nodeList.getLength(); a++){
+                Element deep1 = (Element) nodeList.item(a);
+                if (deep1.getNodeType() == Node.ELEMENT_NODE){
+
+                    Element deepElement = (Element)  deep1;
+                    NodeList nodeList1 = deepElement.getElementsByTagNameNS("*",headerTagSaa.get(1));
+
+                    if (nodeList1.getLength() > 0){
+
+                        System.out.println(nodeList1.item(0).getTextContent());
                         return nodeList1.item(0).getTextContent();
                     }
                 }

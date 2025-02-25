@@ -22,6 +22,16 @@ public class SAAHeader {
 
     private String headerSAAFull;
 
+    private String messageUserReference;
+
+    public String getMessageUserReference() {
+        return messageUserReference;
+    }
+
+    public void setMessageUserReference(String messageUserReference) {
+        this.messageUserReference = messageUserReference;
+    }
+
     /**
      *
      * @param senderReference

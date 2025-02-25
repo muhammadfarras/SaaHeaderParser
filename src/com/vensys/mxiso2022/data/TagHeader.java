@@ -26,4 +26,9 @@ public interface TagHeader {
 
         public static String fullName = "FullName";
     }
+
+    interface MessageUserReference {
+        public static String Root = "InterfaceInfo";
+        public static String MUR = "UserReference";
+    }
 }
