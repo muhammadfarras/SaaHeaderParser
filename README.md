@@ -39,6 +39,7 @@ System.out.println(String.format("%-25s %3s %30s", TagHeader.Receiver.fullName+"
 System.out.println(String.format("%-25s %3s %30s", TagHeader.snFInputTime," : ",saaHeaderParser.getSnFInputTime()));
 System.out.println(String.format("%-25s %3s %30s", TagHeader.expiryDateTime," : ",saaHeaderParser.getExpiryDateTime()));
 System.out.println(String.format("%-25s %3s %30s", TagHeader.priority," : ",saaHeaderParser.getPriority()));
+System.out.println(String.format("%-25s %3s %30s", TagHeader.MessageUserReference.MUR," : ",saaHeaderParser.getMessageUserReference()));
 ```
 
 **Output**
