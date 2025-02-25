@@ -54,4 +54,5 @@ Saa:FullName Receiver      :                     MHCCIDJAXXX
 Saa:SnFInputTime           :        0301:2022-08-04T08:31:03
 Saa:ExpiryDateTime         :                  20220824083134
 Saa:Priority               :                          Normal
+UserReference              :            230426PIAPN192329130
 ```
